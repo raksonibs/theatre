@@ -1,0 +1,11 @@
+<br>
+<%= @user.name %>
+<br>
+<%= image_tag @user.avatar.url(:medium) %>
+<br>
+<%= @user.email %>
+<br>
+<%= @user.points %>
+<br>
+<%= link_to "Edit Profile", edit_user_path(@user) %>
+<%= link_to "Home", events_path %>

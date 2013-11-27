@@ -1,0 +1,23 @@
+<h1>Events</h1>
+<%= link_to "New", new_event_path %>
+	<table>
+		<thead>
+			<tr>
+				<th> Name </th>
+				<th> Description</th>
+				<th> Address </th>
+				<th> See More </th>
+		</thead>
+		<tbody>
+			<% @events.each do |pic| %>
+			<tr>
+				<th><%= pic.title %></th>
+				<th><%= pic.description %></th>
+				<th><%= pic.address %></th>
+				<% if current_user %>
+					<th><%= link_to "See more!", event_path(pic) %></th>
+				<% end %>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
